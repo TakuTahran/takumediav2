@@ -8,7 +8,7 @@ const faqs = [
   },
   {
     question: "How much does it cost?",
-    answer: "Our plans start at $99/month, which includes hosting, maintenance, regular updates, and support. Custom plans are available for businesses with specific needs.",
+    answer: "Our plans start at $218/month, which includes hosting, maintenance, regular updates, and support. Custom plans are available for businesses with specific needs.",
   },
   {
     question: "Can I customize my website?",
