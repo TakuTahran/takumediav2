@@ -3,47 +3,71 @@ import { Check, ArrowRight } from 'lucide-react';
 
 const plans = [
   {
-    name: 'Starter',
-    price: '218',
-    description: 'Easily get started online with the basics.',
+    name: 'Launch',
+    price: '$99',
+    description: 'For: Small local businesses, trades, or freelancers just needing an online presence.',
+    setupFee: '$499',
     features: [
-      'Up to 8 Pages Included',
-      'Hosting & Domain Name',
-      'Mobile-Responsive Website',
-      '& More…'
+      '1–5 pages (Home, About, Services, Contact)',
+      'Mobile-friendly responsive design',
+      'Custom domain setup',
+      'Hosting included',
+      'Basic SEO setup (meta titles, Google listing)',
+      '1 revision per month',
+      'Basic contact form',
+      'Google My Business setup',
+      'Tailored SEO Strategy',
+      'Standard support (email)'
     ],
-    cta: 'Learn more',
+    addons: [
+      'Extra pages ($50/page)',
+      'Ongoing content or blog writing ($100/post)'
+    ],
+    cta: 'Get Started',
     popular: false
   },
   {
-    name: 'Professional',
-    price: '398',
-    description: 'Establish your online presence with the essentials, our most popular package.',
+    name: 'Business',
+    price: '$199',
+    description: 'For: Growing service-based businesses needing leads and branding.',
+    setupFee: '$499',
     features: [
-      'Up to 10 Pages Included',
-      'Mobile-Responsive Website',
-      'Hosting & Domain Name',
-      'Google Ranking Strategy with 3 Keywords',
-      'Quarterly Search Engine Optimization',
-      '& More…'
+      'Everything in Launch +',
+      'Up to 10 pages',
+      'Custom design (not template-based)',
+      'Hosting + SSL + domain',
+      'Contact forms with spam protection',
+      'Tailored SEO Strategy',
+      'Monthly analytics reports',
+      '2 content updates/month',
+      'Priority email + chat support'
     ],
-    cta: 'Get started',
+    addons: [
+      'Extra pages ($50/page)',
+      'Ongoing content or blog writing ($100/post)'
+    ],
+    cta: 'Choose Plan',
     popular: true
   },
   {
-    name: 'Elite',
-    price: '548',
-    description: 'Grow your online presence with this peak performer.',
+    name: 'Scale',
+    price: '$499',
+    description: 'For: Established businesses, ecommerce, or those needing more functionality.',
+    setupFee: '$499',
     features: [
-      'Up to 12 Pages Included',
-      '1 Stock Video Included',
-      'Mobile-Responsive Website',
-      'Hosting & Domain Name',
-      'Google Ranking Strategy with 6 Keywords',
-      'Monthly Search Engine Optimization',
-      '& More…'
+      'Everything in Business +',
+      'Up to 20 products or services',
+      'Advanced SEO Strategy',
+      'Monthly website backup',
+      'Unlimited edits',
+      'Dedicated account manager'
     ],
-    cta: 'Contact sales',
+    addons: [
+      'Email marketing setup',
+      'Paid ads management',
+      'Ongoing content or blog writing ($100/post)'
+    ],
+    cta: 'Contact Sales',
     popular: false
   }
 ];
@@ -83,12 +107,17 @@ const Pricing = () => {
                   {plan.name}
                 </h3>
                 <div className="mt-4 flex items-baseline">
-                  <span className="text-4xl font-extrabold tracking-tight">${plan.price}</span>
+                  <span className="text-4xl font-extrabold tracking-tight">{plan.price}</span>
                   <span className={`ml-1 text-xl ${plan.popular ? 'text-blue-100' : 'text-gray-500'}`}>
                     /month
                   </span>
                 </div>
-                <p className={`mt-6 text-lg ${plan.popular ? 'text-blue-100' : 'text-gray-500'}`}>
+                {plan.setupFee && (
+                  <p className={`mt-2 text-sm ${plan.popular ? 'text-blue-100' : 'text-gray-500'}`}>
+                    Setup Fee: {plan.setupFee}
+                  </p>
+                )}
+                <p className={`mt-4 text-lg ${plan.popular ? 'text-blue-100' : 'text-gray-500'}`}>
                   {plan.description}
                 </p>
 
@@ -104,6 +133,24 @@ const Pricing = () => {
                     </li>
                   ))}
                 </ul>
+
+                {plan.addons.length > 0 && (
+                  <div className={`mt-6 pt-4 border-t ${plan.popular ? 'border-blue-200' : 'border-gray-200'}`}>
+                    <h4 className={`font-semibold ${plan.popular ? 'text-blue-100' : 'text-gray-900'}`}>Add-ons:</h4>
+                    <ul role="list" className="mt-2 space-y-2">
+                      {plan.addons.map((addon) => (
+                        <li key={addon} className="flex items-start">
+                          <div className="flex-shrink-0">
+                            <div className={`h-2 w-2 rounded-full mt-2 ${plan.popular ? 'bg-blue-200' : 'bg-blue-600'}`} />
+                          </div>
+                          <p className={`ml-3 text-sm ${plan.popular ? 'text-blue-100' : 'text-gray-600'}`}>
+                            {addon}
+                          </p>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
               </div>
 
               <a
