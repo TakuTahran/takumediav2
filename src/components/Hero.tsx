@@ -30,7 +30,7 @@ const Hero = () => {
               </div>
               <div className="mt-8 space-x-4">
                 <a
-                  href="https://calendly.com/contact-taku-media/30min"
+                  href="https://calendly.com/tahran-chowdhury/taku-media"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-blue-600 hover:bg-blue-700"

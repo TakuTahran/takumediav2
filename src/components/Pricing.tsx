@@ -154,7 +154,7 @@ const Pricing = () => {
               </div>
 
               <a
-                href="https://calendly.com/contact-taku-media/30min"
+                href="https://calendly.com/tahran-chowdhury/taku-media"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`mt-8 w-full inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md ${

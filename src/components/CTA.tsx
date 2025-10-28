@@ -14,7 +14,7 @@ const CTA = () => {
         <div className="mt-8 flex lg:mt-0 lg:flex-shrink-0">
           <div className="inline-flex rounded-md shadow">
             <a
-              href="https://calendly.com/contact-taku-media/30min"
+              href="https://calendly.com/tahran-chowdhury/taku-media"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-blue-600 bg-white hover:bg-blue-50"

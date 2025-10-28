@@ -34,7 +34,7 @@ const Navbar = () => {
                 </a>
               ))}
               <a
-                href="https://calendly.com/contact-taku-media/30min"
+                href="https://calendly.com/tahran-chowdhury/taku-media"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200"
@@ -70,7 +70,7 @@ const Navbar = () => {
               </a>
             ))}
             <a
-              href="https://calendly.com/contact-taku-media/30min"
+              href="https://calendly.com/tahran-chowdhury/taku-media"
               target="_blank"
               rel="noopener noreferrer"
               className="block w-full mt-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200 text-center"
