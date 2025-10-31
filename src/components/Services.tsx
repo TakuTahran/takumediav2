@@ -1,15 +1,15 @@
 import React from 'react';
-import { Monitor, Cloud, RefreshCcw, Headphones, Shield, Zap } from 'lucide-react';
+import { Monitor, Cloud, RefreshCcw, Headphones, Shield, Zap, TrendingUp, Bot, FileText, PenTool, DollarSign, Lightbulb } from 'lucide-react';
 
 const services = [
   {
-    title: 'Custom Design',
-    description: 'Professionally designed website that matches your brand identity',
+    title: 'Custom Website Design',
+    description: 'Professionally designed websites that match your brand identity and convert visitors into customers',
     icon: Monitor,
   },
   {
     title: 'Cloud Hosting',
-    description: 'Lightning-fast hosting with 99.9% uptime guarantee',
+    description: 'Lightning-fast hosting with 99.9% uptime guarantee and automatic scaling',
     icon: Cloud,
   },
   {
@@ -18,19 +18,34 @@ const services = [
     icon: RefreshCcw,
   },
   {
-    title: '24/7 Support',
-    description: 'Expert support team available around the clock',
-    icon: Headphones,
+    title: 'Conversion Optimization',
+    description: 'Data-driven strategies to increase conversions and revenue from your website',
+    icon: TrendingUp,
   },
   {
-    title: 'Security',
-    description: 'Advanced security measures to protect your website',
-    icon: Shield,
+    title: 'AI Tool Integration',
+    description: 'Implement cutting-edge AI solutions to automate processes and enhance customer experience',
+    icon: Bot,
   },
   {
-    title: 'Performance',
-    description: 'Optimized for speed and conversion',
-    icon: Zap,
+    title: 'Content Strategy',
+    description: 'Comprehensive content strategies that engage your audience and drive business growth',
+    icon: FileText,
+  },
+  {
+    title: 'Content Creation',
+    description: 'Professional copywriting and content creation services tailored to your brand',
+    icon: PenTool,
+  },
+  {
+    title: 'Ad Strategy Consulting',
+    description: 'Expert guidance on paid advertising campaigns across multiple platforms',
+    icon: DollarSign,
+  },
+  {
+    title: 'Digital Transformation',
+    description: 'End-to-end consulting to modernize your business operations and digital presence',
+    icon: Lightbulb,
   },
 ];
 
@@ -40,10 +55,10 @@ const Services = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-            Everything You Need to Succeed Online
+            Comprehensive Digital Solutions
           </h2>
           <p className="mt-4 max-w-2xl mx-auto text-xl text-gray-500">
-            One subscription, unlimited possibilities. Get everything you need to build and maintain a successful website.
+            From stunning websites to strategic consulting - everything you need to thrive in the digital world.
           </p>
         </div>
 
