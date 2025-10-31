@@ -6,9 +6,8 @@ const Navbar = () => {
 
   const menuItems = [
     { title: 'Home', href: '#home' },
-    { title: 'Services', href: '#services' },
-    { title: 'Pricing', href: '#pricing' },
-    { title: 'Contact', href: '#contact' },
+    { title: 'Consulting', href: '#consulting' },
+    { title: 'Web Services', href: '#web-design' },
   ];
 
   return (
@@ -16,7 +15,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
-            <a href="#" className="flex items-center space-x-2">
+            <a href="#home" className="flex items-center space-x-2">
               <Code2 className="h-8 w-8 text-blue-600" />
               <span className="text-xl font-bold text-gray-900">Taku Media</span>
             </a>
@@ -37,49 +36,51 @@ const Navbar = () => {
                 href="https://calendly.com/tahran-chowdhury/taku-media"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200"
+                className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
               >
-                Get Started
+                Book a Call
               </a>
             </div>
           </div>
-
+          
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-600 hover:text-gray-900"
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-blue-600 focus:outline-none"
             >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isOpen ? (
+                <X className="block h-6 w-6" />
+              ) : (
+                <Menu className="block h-6 w-6" />
+              )}
             </button>
           </div>
         </div>
-      </div>
-
-      {/* Mobile menu */}
-      {isOpen && (
-        <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white">
-            {menuItems.map((item) => (
+        
+        {isOpen && (
+          <div className="md:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+              {menuItems.map((item) => (
+                <a
+                  key={item.title}
+                  href={item.href}
+                  className="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-blue-600 hover:bg-gray-50"
+                >
+                  {item.title}
+                </a>
+              ))}
               <a
-                key={item.title}
-                href={item.href}
-                className="block px-3 py-2 text-gray-600 hover:text-blue-600 transition-colors duration-200"
-                onClick={() => setIsOpen(false)}
+                href="https://calendly.com/tahran-chowdhury/taku-media"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full text-center px-3 py-2 rounded-md text-base font-medium text-white bg-blue-600 hover:bg-blue-700 mt-4"
               >
-                {item.title}
+                Book a Call
               </a>
-            ))}
-            <a
-              href="https://calendly.com/tahran-chowdhury/taku-media"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block w-full mt-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200 text-center"
-            >
-              Get Started
-            </a>
+            </div>
           </div>
-        </div>
-      )}
+        )}
+      </div>
     </nav>
   );
 };

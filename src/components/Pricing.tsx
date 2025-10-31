@@ -78,7 +78,7 @@ const Pricing = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl lg:text-5xl">
-            Simple, Transparent Pricing
+            Simple, Transparent Pricing for Your Website
           </h2>
           <p className="mt-4 max-w-2xl mx-auto text-xl text-gray-500">
             Choose the perfect plan for your business needs
